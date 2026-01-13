@@ -23,9 +23,11 @@
 }
 
 .brand-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #38bdf8; /* Azul tecnológico */
+    font-size: 1.8rem; /* Tamaño de título */
+    font-weight: 800; /* Extra negrita */
+    color: #38bdf8; /* Tu azul característico */
+    text-transform: uppercase; /* Todo en mayúsculas */
+    margin-left: 10px;
 }
 
 /* Ajusta tu .hero para que no repita el logo grande */

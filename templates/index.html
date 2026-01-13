@@ -6,14 +6,15 @@
     <link rel="stylesheet"href="{{url_for('static',filename='css/style.css')}}">
 </head>
 <nav class="navbar">
+    <nav class="navbar">
     <div class="nav-container">
-        <img src="{{ url_for('static', filename='img/ardilla-icon.png') }}" alt="logo" class="nav-logo">
-        <span class="brand-name">CGP Data</span>
+        <div class="logo-row">
+            <img src="{{ url_for('static', filename='img/ardilla-icon.png') }}" alt="logo" class="nav-logo">
+            <span class="brand-name">CGP Data Lab</span>
+        </div>
         <div class="tech-logs">MERN Stack (Consultick)</div>
     </div>
 </nav>
-
-<div class="sub-nav">
     <button class="btn-nav">Historia</button>
     <button class="btn-nav">Academia</button>
     <button class="btn-nav">Contáctanos</button>
