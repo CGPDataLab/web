@@ -1,22 +1,28 @@
-/* Configuracion General */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Letra original mas estilizada */
 }
 
 body {
-    background-color: #0f172a; /* Azul oscuro profundo */
+    background-color: #0f172a;
     color: white;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* Barra de Navegación Principal */
+/* Barra Navegacion */
 .navbar {
-    background-color: #1e293b;
+    background-color: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(10px);
     padding: 1rem 5%;
-    border-bottom: 2px solid #38bdf8;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-container {
@@ -27,147 +33,142 @@ body {
     margin: 0 auto;
 }
 
-/* Grupo del Logo y Nombre */
 .logo-group {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 .nav-logo {
-    height: 60px;
+    height: 80px;
     width: auto;
-    background: white;
-    border-radius: 12px;
-    padding: 5px;
-    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
-}
-
-.brand-text {
-    display: flex;
-    flex-direction: column;
+    background: transparent;
+    filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.5));
 }
 
 .brand-name {
-    font-size: 2rem;
-    font-weight: 800;
+    font-size: 1.8rem;
+    font-weight: 900;
     color: #38bdf8;
-    letter-spacing: 1px;
-    line-height: 1.1;
+    letter-spacing: -1px; /* Menos cuadriculada, mas compacta */
 }
 
 .tech-label {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #94a3b8;
-    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-/* Logos de Tecnologías (MERN + Python) */
-.tech-icons-header {
-    display: flex;
-    gap: 20px;
-    font-size: 1.8rem;
-}
-
+/* Iconos Header */
 .tech-icons-header i {
-    transition: transform 0.3s ease, filter 0.3s ease;
-    cursor: help;
+    font-size: 1.8rem;
+    margin-left: 20px;
+    transition: 0.3s;
 }
 
 .tech-icons-header i:hover {
-    transform: scale(1.3);
-    filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
+    transform: translateY(-5px) scale(1.2);
 }
 
-/* Botones Superiores Redondeados */
+/* Botones Navegacion (Sin cuadros blancos solidos) */
 .sub-nav {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 25px;
-    flex-wrap: wrap;
+    gap: 15px;
+    padding: 30px;
 }
 
 .btn-nav {
-    background: white;
-    color: #0f172a;
-    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border: 1px solid rgba(56, 189, 248, 0.4);
     padding: 10px 25px;
-    border-radius: 50px;
-    font-weight: 700;
+    border-radius: 12px;
+    font-weight: 600;
     cursor: pointer;
     transition: 0.3s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .btn-nav:hover {
     background: #38bdf8;
-    color: white;
-    transform: translateY(-2px);
+    color: #0f172a;
 }
 
-/* Seccion Hero (Principal) */
+/* Hero Section */
 .hero {
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+.main-hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    background: linear-gradient(to right, #fff, #38bdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
 }
 
-/* Boton 3D Central */
-.container-3d {
-    margin-top: 30px;
-}
-
+/* Boton 3D */
 .btn-3d {
-    background: white;
+    background: #38bdf8;
     color: #0f172a;
     border: none;
-    padding: 20px 45px;
-    border-radius: 50px;
-    font-size: 1.2rem;
+    padding: 18px 45px;
+    border-radius: 15px;
+    font-size: 1.1rem;
     font-weight: 800;
     cursor: pointer;
-    box-shadow: 0 10px 0 #38bdf8; /* El efecto 3D */
+    box-shadow: 0 8px 0 #0369a1;
     transition: 0.1s;
 }
 
 .btn-3d:active {
-    transform: translateY(6px);
-    box-shadow: 0 4px 0 #38bdf8;
+    transform: translateY(4px);
+    box-shadow: 0 4px 0 #0369a1;
 }
 
-/* Cuadros de Noticias */
+/* Noticias (Sin cuadros blancos solidos) */
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
     padding: 40px 10%;
 }
 
 .news-card {
-    background: white;
-    color: #0f172a;
-    padding: 50px;
-    border-radius: 25px;
+    background: rgba(30, 41, 59, 0.5);
+    padding: 40px;
+    border-radius: 20px;
     text-align: center;
-    min-height: 250px;
-    border: 2px solid #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
 }
 
-/* Pie de Pagina */
+.news-card:hover {
+    border-color: #38bdf8;
+    background: rgba(30, 41, 59, 0.8);
+    transform: translateY(-10px);
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 40px;
-    background: #1e293b;
-    margin-top: 50px;
+    padding: 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-contact {
-    margin-top: 10px;
-    color: #38bdf8;
-    font-weight: bold;
+.footer-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    color: #94a3b8;
 }
