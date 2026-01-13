@@ -6,20 +6,7 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-{
-  "version": 2,
-  "builds": [
-    {
-      "src": "app.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "app.py"
-    }
-  ]
-}
+if __name__ == "__main__":
+    app.run()
 
 
