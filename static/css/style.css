@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+  text-align: center;
+}
+
+.hero {
+   padding: 60px 20px;
+}
+
+.logo {
+   width: 160px;
+   margin-bottom: 20px;
+   border-radius: 50%; /* Esto hará que tu logo de ardilla se vea circular y más moderno */
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+p {
+ font-size: 1.2rem;
+ color: #94a3b8;
+}
+
+.tech {
+   background: #020617;
+   padding: 40px 20px;
+   margin-top: 20px;
+}
+
+.tech ul { 
+   list-style: none;
+   padding: 0;
+}
+
+.tech li {
+   margin: 10px 0;
+   font-size: 1.1rem;
+   color: #38bdf8; /* Un azul claro para resaltar tus habilidades */
+}
+
+footer {
+  padding: 20px;
+  font-size: 0.9rem;
+  border-top: 1px solid #1e293b;
+}
