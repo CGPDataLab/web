@@ -1,138 +1,173 @@
-/* Añade esto para controlar la nueva posición */
+/* Configuracion General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a; /* Azul oscuro profundo */
+    color: white;
+    line-height: 1.6;
+}
+
+/* Barra de Navegación Principal */
 .navbar {
-    display: flex;
-    align-items: center;
-    padding: 10px 5%;
-    background: #020617; /* Color oscuro que ya usas */
-    border-bottom: 1px solid #1e293b;
+    background-color: #1e293b;
+    padding: 1rem 5%;
+    border-bottom: 2px solid #38bdf8;
 }
 
 .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Grupo del Logo y Nombre */
+.logo-group {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
 .nav-logo {
-    height: 45px;
+    height: 60px;
     width: auto;
-    background: white; /* Mantiene el fondo pero lo integra */
-    border-radius: 8px; /* Redondea las esquinas */
-    padding: 2px;
-    box-shadow: 0 0 10px rgba(56, 189, 248, 0.3); /* Un leve brillo azul */
+    background: white;
+    border-radius: 12px;
+    padding: 5px;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
 }
 
 .brand-name {
-    font-size: 1.8rem; /* Tamaño de título */
-    font-weight: 800; /* Extra negrita */
-    color: #38bdf8; /* Tu azul característico */
-    text-transform: uppercase; /* Todo en mayúsculas */
-    margin-left: 10px;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #38bdf8;
+    letter-spacing: 1px;
+    line-height: 1.1;
 }
 
-/* Ajusta tu .hero para que no repita el logo grande */
-.hero .logo {
-    display: none; /* Esto oculta la ardilla grande del centro si no la borraste del HTML */
+.tech-label {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    font-weight: 500;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #0f172a;
-  color: #e5e7eb;
-  text-align: center;
+/* Logos de Tecnologías (MERN + Python) */
+.tech-icons-header {
+    display: flex;
+    gap: 20px;
+    font-size: 1.8rem;
 }
 
-.hero {
-   padding: 60px 20px;
+.tech-icons-header i {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: help;
 }
 
-.logo {
-   width: 160px;
-   margin-bottom: 20px;
-   border-radius: 50%; /* Esto hará que tu logo de ardilla se vea circular y más moderno */
+.tech-icons-header i:hover {
+    transform: scale(1.3);
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin: 10px 0;
-}
-
-p {
- font-size: 1.2rem;
- color: #94a3b8;
-}
-
-.tech {
-   background: #020617;
-   padding: 40px 20px;
-   margin-top: 20px;
-}
-
-.tech ul { 
-   list-style: none;
-   padding: 0;
-}
-
-.tech li {
-   margin: 10px 0;
-   font-size: 1.1rem;
-   color: #38bdf8; /* Un azul claro para resaltar tus habilidades */
-}
-
-footer {
-  padding: 20px;
-  font-size: 0.9rem;
-  border-top: 1px solid #1e293b;
-}
-
-/* Botones de navegación redondeados */
+/* Botones Superiores Redondeados */
 .sub-nav {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    padding: 20px;
+    gap: 20px;
+    padding: 25px;
     flex-wrap: wrap;
 }
 
 .btn-nav {
     background: white;
-    color: black;
-    border: 2px solid black;
-    border-radius: 50px; /* Bordes muy redondeados */
+    color: #0f172a;
+    border: none;
     padding: 10px 25px;
-    font-weight: bold;
+    border-radius: 50px;
+    font-weight: 700;
     cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Cuadrícula de noticias */
+.btn-nav:hover {
+    background: #38bdf8;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Seccion Hero (Principal) */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Boton 3D Central */
+.container-3d {
+    margin-top: 30px;
+}
+
+.btn-3d {
+    background: white;
+    color: #0f172a;
+    border: none;
+    padding: 20px 45px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 10px 0 #38bdf8; /* El efecto 3D */
+    transition: 0.1s;
+}
+
+.btn-3d:active {
+    transform: translateY(6px);
+    box-shadow: 0 4px 0 #38bdf8;
+}
+
+/* Cuadros de Noticias */
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 40px 5%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 10%;
 }
 
 .news-card {
     background: white;
-    color: black;
-    border: 3px solid black;
-    border-radius: 20px;
+    color: #0f172a;
+    padding: 50px;
+    border-radius: 25px;
+    text-align: center;
+    min-height: 250px;
+    border: 2px solid #e2e8f0;
+}
+
+/* Pie de Pagina */
+footer {
+    text-align: center;
     padding: 40px;
-    min-height: 200px;
+    background: #1e293b;
+    margin-top: 50px;
 }
 
-/* Efecto 3D para el botón central */
-.btn-3d {
-    background: white;
-    border: 2px solid black;
-    padding: 15px 40px;
-    border-radius: 50px;
-    box-shadow: 0 10px 0 #38bdf8; /* Sombra azul que da el efecto 3D */
-    transition: 0.3s;
-}
-
-.btn-3d:hover {
-    transform: translateY(5px);
-    box-shadow: 0 5px 0 #38bdf8;
+.footer-contact {
+    margin-top: 10px;
+    color: #38bdf8;
+    font-weight: bold;
 }

@@ -2,45 +2,57 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CGP Data Lab</title>
-    <link rel="stylesheet"href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<nav class="navbar">
+<body>
+    
     <nav class="navbar">
-    <div class="nav-container">
-        <div class="logo-row">
-            <img src="{{ url_for('static', filename='img/ardilla-icon.png') }}" alt="logo" class="nav-logo">
-            <span class="brand-name">CGP Data Lab</span>
+        <div class="nav-container">
+            <div class="logo-group">
+                <img src="{{ url_for('static', filename='img/ardilla-icon.png') }}" alt="logo" class="nav-logo">
+                <div class="brand-text">
+                    <span class="brand-name">CGP DATA LAB</span>
+                    <span class="tech-label">FullStack MERN (Consultick)</span>
+                </div>
+            </div>
+            
+            <div class="tech-icons-header">
+                <i class="fab fa-mongodb" style="color: #47A248;" title="MongoDB"></i>
+                <i class="fab fa-node-js" style="color: #339933;" title="Node.js"></i>
+                <i class="fab fa-react" style="color: #61DAFB;" title="React"></i>
+                <i class="fab fa-python" style="color: #3776AB;" title="Python"></i>
+            </div>
         </div>
-        <div class="tech-logs">MERN Stack (Consultick)</div>
+    </nav>
+
+    <div class="sub-nav">
+        <button class="btn-nav">Historia</button>
+        <button class="btn-nav">Academia</button>
+        <button class="btn-nav">Contáctanos</button>
+        <button class="btn-nav">Inteligencia Artificial</button>
     </div>
-</nav>
-    <button class="btn-nav">Historia</button>
-    <button class="btn-nav">Academia</button>
-    <button class="btn-nav">Contáctanos</button>
-    <button class="btn-nav">Inteligencia Artificial</button>
-</div>
 
-<header class="hero">
-    <h1>Innovacion en Datos y Software</h1>
-    <p>Soluciones potentes para la era digital</p>
-    
-    <div class="container-3d">
-        <button class="btn-3d">Mis Redes Sociales</button>
-    </div>
-</header>
+    <header class="hero">
+        <h1>Innovacion en Datos y Software</h1>
+        <p>Soluciones potentes para la era digital</p>
+        <div class="container-3d">
+            <button class="btn-3d">Mis Redes Sociales</button>
+        </div>
+    </header>
 
-<section class="news-grid">
-    <div class="news-card"><h3>Noticia 1</h3><p>Tecnología</p></div>
-    <div class="news-card"><h3>Noticia 2</h3><p>FullStack MERN</p></div>
-    <div class="news-card"><h3>Noticia 3</h3><p>Inteligencia Artificial</p></div>
-</section>
+    <section class="news-grid">
+        <div class="news-card"><h3>Noticia 1</h3><p>Tecnología</p></div>
+        <div class="news-card"><h3>Noticia 2</h3><p>FullStack MERN</p></div>
+        <div class="news-card"><h3>Noticia 3</h3><p>Inteligencia Artificial</p></div>
+    </section>
 
-<footer>
-    <p>© 2026 CGP Data Lab</p>
-    <div class="contact-footer">WhatsApp | Correo Electrónico</div>
-</footer>
+    <footer>
+        <p>© 2026 CGP Data Lab</p>
+        <p class="footer-contact">WhatsApp | Correo Electrónico</p>
+    </footer>
+
+</body>
 </html>
-
-    
-     
