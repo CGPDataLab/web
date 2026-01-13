@@ -13,9 +13,9 @@ body {
     line-height: 1.6;
 }
 
-/* Barra de Navegación */
+/* Navbar: Color sólido para que la ardilla se camufle */
 .navbar {
-    background-color: #1e293b; /* Color sólido para camuflaje */
+    background-color: #1e293b; 
     padding: 1rem 5%;
     border-bottom: 2px solid #38bdf8;
     position: sticky;
@@ -34,63 +34,130 @@ body {
 .logo-group {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
-/* Camuflaje de fondo para la ardilla */
+/* Logo: Sin filtros, solo integración por color */
 .nav-logo {
-    height: 80px;
+    height: 75px;
     width: auto;
     background-color: #1e293b; /* Igual al fondo de la navbar */
-    border-radius: 8px;
-    padding: 5px;
-    mix-blend-mode: multiply; /* Truco de ingeniería para oscurecer el blanco */
-    transition: 0.3s;
+    border-radius: 5px;
 }
 
 .brand-name {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #38bdf8;
 }
 
-.tech-label {
-    font-size: 0.85rem;
-    color: #94a3b8;
-}
-
-/* Resto de estilos premium */
-.sub-nav { display: flex; justify-content: center; gap: 15px; padding: 30px; }
+/* Botones Navegación Estilo Premium */
 .btn-nav {
-    background: rgba(255, 255, 255, 0.05);
+    background: transparent;
     color: white;
-    border: 1px solid rgba(56, 189, 248, 0.3);
-    padding: 10px 25px;
-    border-radius: 12px;
+    border: 1px solid #38bdf8;
+    padding: 8px 20px;
+    border-radius: 8px;
+    margin-left: 10px;
     cursor: pointer;
     transition: 0.3s;
 }
-.btn-nav:hover { background: #38bdf8; color: #0f172a; }
 
-.hero { text-align: center; padding: 60px 20px; }
-.main-hero-title { font-size: 3.5rem; font-weight: 900; color: #fff; }
+.btn-nav:hover {
+    background: #38bdf8;
+    color: #0f172a;
+}
 
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: radial-gradient(circle, rgba(30,41,59,1) 0%, rgba(15,23,42,1) 100%);
+}
+
+.main-hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+/* Tu idea: Logos de tecnologías en el centro */
+.tech-stack-showcase {
+    font-size: 3rem;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.tech-stack-showcase i {
+    transition: transform 0.3s;
+}
+
+.tech-stack-showcase i:hover {
+    transform: scale(1.3);
+}
+
+/* Botón 3D Azul */
 .btn-3d {
     background: #38bdf8;
     color: #0f172a;
-    padding: 18px 45px;
-    border-radius: 15px;
-    font-weight: 800;
-    box-shadow: 0 8px 0 #0369a1;
-    cursor: pointer;
     border: none;
+    padding: 20px 50px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    box-shadow: 0 10px 0 #0369a1;
+    cursor: pointer;
+    transition: 0.1s;
 }
 
-.news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 40px 10%; }
-.news-card { background: rgba(30, 41, 59, 0.5); padding: 40px; border-radius: 20px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.1); }
-.card-icon { font-size: 3rem; color: #38bdf8; margin-bottom: 15px; }
+.btn-3d:active {
+    transform: translateY(4px);
+    box-shadow: 0 4px 0 #0369a1;
+}
 
-footer { text-align: center; padding: 60px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
-.footer-links { display: flex; justify-content: center; gap: 40px; margin-top: 20px; }
-.contact-item { text-decoration: none; color: #94a3b8; font-weight: 600; transition: 0.3s; }
+/* Noticias Sin Cuadros Blancos */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 50px 10%;
+}
+
+.news-card {
+    background: rgba(30, 41, 59, 0.6);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.card-icon {
+    font-size: 3.5rem;
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+/* Footer de Contacto */
+footer {
+    text-align: center;
+    padding: 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-links {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.contact-item {
+    text-decoration: none;
+    color: #94a3b8;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
 .contact-item:hover { color: #38bdf8; }
