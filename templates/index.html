@@ -5,34 +5,40 @@
     <title>CGP Data Lab</title>
     <link rel="stylesheet"href="{{url_for('static',filename='css/style.css')}}">
 </head>
-<body>
-    
-  <nav class="navbar">
+<nav class="navbar">
     <div class="nav-container">
-      <img src="{{ url_for('static', filename='img/ardilla-icon.png') }}" alt="logo" class="nav-logo">
-      <span class="brand-name">CGP Data</span>
+        <img src="{{ url_for('static', filename='img/ardilla-icon.png') }}" alt="logo" class="nav-logo">
+        <span class="brand-name">CGP Data</span>
+        <div class="tech-logs">MERN Stack (Consultick)</div>
     </div>
-  </nav>
+</nav>
 
-  <header class="hero">
+<div class="sub-nav">
+    <button class="btn-nav">Historia</button>
+    <button class="btn-nav">Academia</button>
+    <button class="btn-nav">Contáctanos</button>
+    <button class="btn-nav">Inteligencia Artificial</button>
+</div>
+
+<header class="hero">
     <h1>Innovacion en Datos y Software</h1>
     <p>Soluciones potentes para la era digital</p>
-  </header>
+    
+    <div class="container-3d">
+        <button class="btn-3d">Mis Redes Sociales</button>
+    </div>
+</header>
 
-  <section class="tech">
-    <h2>Tecnologías</h2>
-    <ul>
-      <li>Python</li>
-      <li>Flask</li>
-      <li>HTML & CSS</li>
-      <li>Git & GitHub</li>
-    </ul>
-  </section>
+<section class="news-grid">
+    <div class="news-card"><h3>Noticia 1</h3><p>Tecnología</p></div>
+    <div class="news-card"><h3>Noticia 2</h3><p>FullStack MERN</p></div>
+    <div class="news-card"><h3>Noticia 3</h3><p>Inteligencia Artificial</p></div>
+</section>
 
-  <footer>
-    <p>© 2026 CGP Data Lab</p>/footer>.
-
-</body>
+<footer>
+    <p>© 2026 CGP Data Lab</p>
+    <div class="contact-footer">WhatsApp | Correo Electrónico</div>
+</footer>
 </html>
 
     

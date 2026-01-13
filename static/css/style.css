@@ -83,3 +83,54 @@ footer {
   font-size: 0.9rem;
   border-top: 1px solid #1e293b;
 }
+
+/* Botones de navegación redondeados */
+.sub-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-nav {
+    background: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 50px; /* Bordes muy redondeados */
+    padding: 10px 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Cuadrícula de noticias */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 5%;
+}
+
+.news-card {
+    background: white;
+    color: black;
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 40px;
+    min-height: 200px;
+}
+
+/* Efecto 3D para el botón central */
+.btn-3d {
+    background: white;
+    border: 2px solid black;
+    padding: 15px 40px;
+    border-radius: 50px;
+    box-shadow: 0 10px 0 #38bdf8; /* Sombra azul que da el efecto 3D */
+    transition: 0.3s;
+}
+
+.btn-3d:hover {
+    transform: translateY(5px);
+    box-shadow: 0 5px 0 #38bdf8;
+}
