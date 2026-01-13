@@ -14,8 +14,12 @@
 }
 
 .nav-logo {
-    height: 45px; /* Tamaño ideal para una esquina */
+    height: 45px;
     width: auto;
+    background: white; /* Mantiene el fondo pero lo integra */
+    border-radius: 8px; /* Redondea las esquinas */
+    padding: 2px;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.3); /* Un leve brillo azul */
 }
 
 .brand-name {
